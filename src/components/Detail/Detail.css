@@ -1,0 +1,44 @@
+.cont-detail{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-des{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(4, 4, 19);
+    box-shadow: 5px 5px 20px #fff;
+}
+
+.container-img{
+    width: 100%;
+}
+
+.img-detail{
+    height: 450px;
+    width: 450px;
+    border-radius: 100%;
+    box-shadow: 5px 5px 20px #fff;
+}
+
+.logo{
+    width: 500px;
+    height: 150px;
+}
+
+.desc{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+.desc:hover{
+    color: rgb(80, 154, 238);
+}

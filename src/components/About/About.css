@@ -1,0 +1,42 @@
+.cont-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cont-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 370px;
+    background-color: rgb(126, 118, 118);
+    box-shadow: 5px 5px 20px #fff;
+    border-radius: 38px;
+    cursor: pointer;
+}
+
+.cont-info:hover{
+    box-shadow: 5px 5px 50px #fff; 
+}
+
+.lnk {
+    text-decoration: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.lnk:hover{
+    color: blueviolet;
+}
+
+.h-info {
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.h-info:hover{
+    color: #dc4282;
+}

@@ -1,0 +1,104 @@
+.card-cont{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card-cont2{
+    display: flex;
+}
+
+.card{
+    height: 553px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px #fff;
+    overflow: hidden;
+}
+
+.img-card{
+    height: 553px;
+    width: 350px;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.intro {
+    height: 120px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 240px;
+    background-color: rgb(27, 27, 27, .5);
+    color: white;
+    transition: .5s;
+}
+
+.intro-h{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.name{
+    margin: 10px;
+    font-size: 30px;
+    color: rgb(249, 245, 250);
+    cursor: pointer;
+}
+
+.name:hover{
+    color: rgb(80, 154, 238);
+}
+
+h4{
+    color: rgb(120, 147, 236);
+}
+
+p{
+    font-size: 23px;
+    margin: 25px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.x{
+    background-color: rgb(204, 67, 67);
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.x:hover {
+    border: 0;
+}
+  
+.x:active{
+    transform: scale(0.8);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card:hover .intro{
+    height: 220px;
+    bottom: 240px;
+    background-color: rgb(112, 96, 96);
+}
+
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+
+.card:hover .img-card{
+    transform: scale(1.1) rotate(-3deg);
+}
