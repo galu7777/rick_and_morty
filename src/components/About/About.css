@@ -10,8 +10,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 500px;
-    width: 370px;
+    height: 600px;
+    width: 450px;
     background-color: rgb(126, 118, 118);
     box-shadow: 5px 5px 20px #fff;
     border-radius: 38px;
@@ -25,11 +25,13 @@
 .lnk {
     text-decoration: none;
     font-size: 25px;
+    transition: 0.5s;
     cursor: pointer;
 }
 
 .lnk:hover{
     color: blueviolet;
+    font-size: 35px;
 }
 
 .h-info {
@@ -39,4 +41,16 @@
 
 .h-info:hover{
     color: #dc4282;
+    font-weight: 900;
+}
+
+.perrito{
+    width: 180px;
+    height: 180px;
+    transition: .3s;
+    cursor: pointer;
+}
+.perrito:hover{
+    width: 200px;
+    height: 200px;
 }

@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from 'axios';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate} from "react-router-dom";
 
 import "./App.css";
 import Nav from "./components/Nav/Nav";
 import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import Cards from "./components/Cards/Cards";
-// import Form from "./components/Form/Form";
+import Form from "./components/Form/Form";
 
 // import characters from "./data.js";
 
@@ -26,9 +26,26 @@ import Cards from "./components/Cards/Cards";
 const BASE_URL = 'https://be-a-rym.up.railway.app/api/character';
 const API_KEY = '4ad56d52154b.f5800a94204608bdc3fa';
 
-function App() {
+const email = 'user@gmail.com'
+const password = '123456'
 
-  const [characters, setCharacters] = useState([])
+function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [characters, setCharacters] = useState([]);
+  const [access, setAccess] = useState(false);
+
+  const login = (userData) => {
+    if(userData.email === email && userData.password === password){
+      setAccess(true)
+      navigate('/home')      
+    }
+  }
+
+  useEffect(() => {
+    !access && navigate('/')
+  }, [access])
+  
   
   const onSearch = (id) => {
     axios(`${BASE_URL}/${id}?key=${API_KEY}`)
@@ -50,12 +67,14 @@ function App() {
  
   return (
     <div className="App">
-      <Nav onSearch={onSearch}/>
+      { 
+        location.pathname !== '/' && <Nav onSearch={onSearch} setAccess={setAccess}/>
+      }
       <Routes>
+        <Route path='/' element={<Form login={login}/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>}/>
         <Route path='/detail/:id' element={<Detail characters={characters}/>}/>
-        {/* <Route path='/form' element={<Form/>}/> */}
       </Routes>
       
     </div>

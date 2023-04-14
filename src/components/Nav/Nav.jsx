@@ -3,18 +3,19 @@ import { NavLink } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 import "./Nav.css";
 
-export default function Nav({ onSearch }) {
+export default function Nav({ onSearch, setAccess }) {
+ 
   return (
     <nav>
       <div className="container-button">
-        <button className="btn" style={{marginRight: '25px'}}>
+        <button className="btn-nav" style={{marginRight: '25px'}}>
           <NavLink to="/about" className="link-button">About</NavLink>
         </button>
-        <button className="btn">
+        <button className="btn-nav">
           <NavLink to="/home" className="link-button">Home</NavLink>
         </button>
-      </div> 
-      <SearchBar onSearch={onSearch} />          
+      </div>
+      <SearchBar onSearch={onSearch} setAccess={setAccess}/>          
     </nav>
   );
 }

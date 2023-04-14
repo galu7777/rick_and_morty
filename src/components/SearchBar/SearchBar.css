@@ -29,6 +29,33 @@
     transform: scale(0.8);
   }
 
+  .btn-logout {
+    border-color: #fff;
+    border-width: 1px;
+    background-image: linear-gradient(
+      150deg,
+      #e0431c,
+      rgb(243, 146, 35),
+      #fffb00
+    );
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 8px;
+    color: #fff;
+  }
+  
+  .btn-logout:hover {
+    border: 0;
+    border-radius: 10%;
+  }
+  
+  .btn-logout:active{
+    transform: scale(0.8);
+  }
+
   .input{
     display: block;
     padding: 0.7rem 2rem;
