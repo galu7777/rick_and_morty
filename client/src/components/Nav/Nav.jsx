@@ -14,6 +14,9 @@ export default function Nav({ onSearch, setAccess }) {
         <button className="btn-nav">
           <NavLink to="/home" className="link-button">Home</NavLink>
         </button>
+        <button className="btn-nav" style={{marginLeft: '8%'}}>
+          <NavLink to="/favorites" className="link-button">Favorites</NavLink>
+        </button>
       </div>
       <SearchBar onSearch={onSearch} setAccess={setAccess}/>          
     </nav>

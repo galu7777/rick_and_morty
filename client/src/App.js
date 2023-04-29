@@ -8,6 +8,7 @@ import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import Cards from "./components/Cards/Cards";
 import Form from "./components/Form/Form";
+import Favorites from './components/Favorites/Favorites'
 
 // import characters from "./data.js";
 
@@ -26,8 +27,8 @@ import Form from "./components/Form/Form";
 const BASE_URL = 'https://be-a-rym.up.railway.app/api/character';
 const API_KEY = '4ad56d52154b.f5800a94204608bdc3fa';
 
-const email = 'user@gmail.com'
-const password = '123456'
+// const email = 'user@gmail.com'
+// const password = '123456'
 
 function App() {
   const location = useLocation();
@@ -36,11 +37,14 @@ function App() {
   const [access, setAccess] = useState(false);
 
   const login = (userData) => {
-    if(userData.email === email && userData.password === password){
-      setAccess(true)
-      navigate('/home')      
-    }
-  }
+    const { email, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+       const { access } = data;
+       setAccess(access);
+       access && navigate('/home');
+    });
+ }
 
   useEffect(() => {
     !access && navigate('/')
@@ -75,6 +79,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>}/>
         <Route path='/detail/:id' element={<Detail characters={characters}/>}/>
+        <Route path='/favorites' element={<Favorites/>}/>
       </Routes>
       
     </div>
