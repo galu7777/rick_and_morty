@@ -1,8 +1,11 @@
-
-.container{
-    display: flex;
-    justify-content: center;
-    /* grid-template-columns: 50% 50%; */
+.ctn-p{
     height: 100vh;
-    align-items: center;
+    background-attachment: fixed;
 }
+.container{
+    display: grid;
+    background-attachment: fixed;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+}
+
