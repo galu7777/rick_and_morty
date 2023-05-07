@@ -24,8 +24,8 @@ import Favorites from './components/Favorites/Favorites'
 //   },
 //   image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
 // };
-const BASE_URL = 'https://be-a-rym.up.railway.app/api/character';
-const API_KEY = '4ad56d52154b.f5800a94204608bdc3fa';
+// const BASE_URL = 'https://be-a-rym.up.railway.app/api/character';
+// const API_KEY = '4ad56d52154b.f5800a94204608bdc3fa'; /// API caida:
 
 // const email = 'user@gmail.com'
 // const password = '123456'
@@ -49,10 +49,10 @@ function App() {
   useEffect(() => {
     !access && navigate('/')
   }, [access])
-  
-  
+
+
   const onSearch = (id) => {
-    axios(`${BASE_URL}/${id}?key=${API_KEY}`)
+    axios(`http://localhost:3001/rickandmorty/character/${id}`)
     .then(response => response.data)
     .then((data) => {
        if (data.name) {
@@ -62,26 +62,26 @@ function App() {
        }
     });
  }
- 
+
  const onClose = (id) => {
   // setCharacters(characters.filter((char) => char.id !== id));
   const charactersFiltered = characters.filter(character => character.id !== id)
   setCharacters(charactersFiltered)
  }
- 
+
   return (
     <div className="App">
-      { 
+      {
         location.pathname !== '/' && <Nav onSearch={onSearch} setAccess={setAccess}/>
       }
       <Routes>
         <Route path='/' element={<Form login={login}/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>}/>
-        <Route path='/detail/:id' element={<Detail characters={characters}/>}/>
         <Route path='/favorites' element={<Favorites/>}/>
+        <Route path='/detail/:id' element={<Detail characters={characters}/>}/>
       </Routes>
-      
+
     </div>
   );
 }

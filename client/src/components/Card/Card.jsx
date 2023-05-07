@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import './Card.css';
 
 
-function Card({
+const Card = ({
   id,
   name,
   status,
@@ -18,7 +18,7 @@ function Card({
   addFav,
   removeFav,
   myFavorites
-}) {
+}) => {
 
   const [isFav, setIsFav] = useState(false);
 
@@ -42,25 +42,27 @@ function Card({
  }, [myFavorites]);
 
   return (
-    <div className="card-cont">
-      <div className="card-cont2">
-        <div className="card">        
-          <img src={image} alt="" className="img-card"/>
-          <div className="intro">
-            <div className="intro-h">
-              {/* <h4>ID: {id}</h4> */}
-              <button onClick={handleFavorite}>{isFav ? '❤️' : '🤍'}</button>
-              <button onClick={() => onClose(id)} className='x'>X</button>
+    <>
+      <div className="card-cont">
+        <div className="card-cont2">
+          <div className="card">        
+            <img src={image} alt="" className="img-card"/>
+            <div className="intro">
+              <div className="intro-h">
+                {/* <h4>ID: {id}</h4> */}
+                <button onClick={handleFavorite} className="heart">{isFav ? '❤️' : '🤍'}</button>
+                <button onClick={() => onClose(id)} className='x'>X</button>
+              </div>
+              <NavLink to={`/detail/${id}`} element={<Detail/>} className='link'>
+                <h2 className="name">{name}</h2>
+              </NavLink>
+              <p className="info-p">{status}, {species}, {gender}</p>
+              <p className="info-p">Origin: {origin}</p>
             </div>
-            <NavLink to={`/detail/${id}`} element={<Detail/>} className='link'>
-              <h2 className="name">{name}</h2>
-            </NavLink>
-            <p>{status}, {species}, {gender}</p>
-            <p>Origin: {origin}</p>
-          </div>
-        </div>  
-      </div>      
-    </div>
+          </div>  
+        </div>      
+      </div>
+    </>
   );
 }
 

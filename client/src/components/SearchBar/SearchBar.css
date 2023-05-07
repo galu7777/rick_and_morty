@@ -3,63 +3,158 @@
     justify-content: center;
     align-items: center;
 }
-.btn-search {
-    border-color: #fff;
-    border-width: 1px;
-    background-image: linear-gradient(
-      150deg,
-      #9500ff,
-      #09f,
-      #00DDFF
-    );
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 10px 14px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-left: 8px;
-    color: #fff;
-  }
-  
-  .btn-search:hover {
-    border: 0;
-  }
-  
-  .btn-search:active{
-    transform: scale(0.8);
-  }
 
-  .btn-logout {
-    border-color: #fff;
-    border-width: 1px;
-    background-image: linear-gradient(
-      150deg,
-      #e0431c,
-      rgb(243, 146, 35),
-      #fffb00
-    );
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 10px 14px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-left: 8px;
-    color: #fff;
-  }
-  
-  .btn-logout:hover {
-    border: 0;
-    border-radius: 10%;
-  }
-  
-  .btn-logout:active{
-    transform: scale(0.8);
-  }
+.btn-search{
+  position: relative;
+  background: #fff;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 10px 30px;
+  transition: 0.5s;
+  margin: 10px;
+}
 
-  .input{
-    display: block;
-    padding: 0.7rem 2rem;
-    border-radius: 5px;
-    border: 0;
-    outline: solid 1px #4285f4;
-  }
+.btn-search:hover{
+  background: #1e9bff;
+  color: #1e9bff;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  box-shadow: 0 0 35px #1e9bff;
+}
+
+.btn-search:before{
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+}
+
+button i{
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+button i::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background-color: #27282c;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+
+button:hover i::before{
+  width: 20%;
+  left: 20%;
+}
+
+button i::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background-color: #27282c;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+
+button:hover i::after{
+  width: 20%;
+  left: 80%;
+}
+
+.btn-logout{
+  position: relative;
+  background: #fff;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 10px 30px;
+  transition: 0.5s;
+  margin: 10px;
+}
+
+.btn-logout:hover{
+  background: red;
+  color: red;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  box-shadow: 0 0 35px red;
+}
+
+.btn-logout:before{
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+}
+
+button i{
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+button i::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background-color: #27282c;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+
+button:hover i::before{
+  width: 20%;
+  left: 20%;
+}
+
+button i::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background-color: #27282c;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+
+button:hover i::after{
+  width: 20%;
+  left: 80%;
+}
+
+.input{
+  display: block;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  border: 0;
+  outline: solid 1px #82cc3a;
+  box-shadow: 0 8px 32px 0 #82cc3a;
+}
