@@ -12,15 +12,14 @@
     flex-direction: column;
     height: 600px;
     width: 450px;
-    background-color: rgba(82, 78, 78, 0.4);
-    box-shadow: 0 8px 32px 0 #82cc3a;
-    backdrop-filter: blur(4.0px);
+    background-color: rgb(126, 118, 118);
+    box-shadow: 5px 5px 20px #fff;
     border-radius: 38px;
     cursor: pointer;
 }
 
 .cont-info:hover{
-    box-shadow: 5px 5px 50px #82cc3a; 
+    box-shadow: 5px 5px 50px #fff; 
 }
 
 .lnk {
@@ -37,10 +36,11 @@
 
 .h-info {
     margin-bottom: 25px;
-    color: rgb(243, 247, 60);
+    color: #fff;
 }
 
 .h-info:hover{
+    color: #dc4282;
     font-weight: 900;
 }
 
@@ -53,25 +53,4 @@
 .perrito:hover{
     width: 200px;
     height: 200px;
-    transition: 0.4s;
-}
-
-.img{
-    width: 150px;
-    height: 80px;
-}
-
-.img:hover{
-    width: 170px;
-    height: 100px;
-}
-
-.img-In{
-    width: 80px;
-    height: 80px;
-}
-
-.img-In:hover{
-    width: 90px;
-    height: 90px;
 }

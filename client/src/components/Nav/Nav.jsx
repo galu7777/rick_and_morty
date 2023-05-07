@@ -9,13 +9,13 @@ export default function Nav({ onSearch, setAccess }) {
     <nav>
       <div className="container-button">
         <button className="btn-nav" style={{marginRight: '25px'}}>
-          <NavLink to="/about" className="link-button"><span>About</span><i></i></NavLink>
+          <NavLink to="/about" className="link-button">About</NavLink>
         </button>
         <button className="btn-nav">
-          <NavLink to="/home" className="link-button"><span>Home</span><i></i></NavLink>
+          <NavLink to="/home" className="link-button">Home</NavLink>
         </button>
         <button className="btn-nav" style={{marginLeft: '8%'}}>
-          <NavLink to="/favorites" className="link-button"><span>Favorites</span><i></i></NavLink>
+          <NavLink to="/favorites" className="link-button">Favorites</NavLink>
         </button>
       </div>
       <SearchBar onSearch={onSearch} setAccess={setAccess}/>          

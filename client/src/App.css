@@ -1,12 +1,6 @@
-*{
-   margin: 0;
-   padding: 0;
-}
 .App {
    text-align: center;
-   background-image: url('./assets/rick-y-morty-escapando-de-portal.jpg');
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-size: 100% 100%;
-   background-attachment: fixed;
+   background-image: url('./assets/bg2.jpg');
+   background-size: cover;
+   opacity: 0.9;   
 }

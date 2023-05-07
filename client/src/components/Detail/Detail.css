@@ -13,7 +13,7 @@
     width: 100%;
     height: 100%;
     background-color: rgb(4, 4, 19);
-    box-shadow: 5px 5px 20px rgb(243, 247, 60);
+    box-shadow: 5px 5px 20px #fff;
 }
 
 .container-img{
@@ -24,7 +24,7 @@
     height: 450px;
     width: 450px;
     border-radius: 100%;
-    box-shadow: 5px 5px 20px rgb(243, 247, 60);
+    box-shadow: 5px 5px 20px #fff;
 }
 
 .logo{
@@ -40,5 +40,5 @@
 }
 
 .desc:hover{
-    color: rgb(243, 247, 60);
+    color: rgb(80, 154, 238);
 }

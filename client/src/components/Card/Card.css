@@ -1,7 +1,7 @@
 .card-cont{
-    margin-top: 7%;
     display: flex;
     justify-content: center;
+    height: 100vh;
 }
 
 .card-cont2{
@@ -9,28 +9,29 @@
 }
 
 .card{
-    height: 400px;
-    width: 200px;
-    background-color: rgba(82, 78, 78, 0.4);
-    box-shadow: 0 8px 32px 0 #82cc3a;
-    backdrop-filter: blur(6.0px);
-    transition: 0.4s;
-    cursor: pointer;
-}
-
-.card:hover{
-    height: 420px;
-    width: 220px;
-    background-color: rgba(82, 78, 78, 0.4);
-    box-shadow: 0 8px 32px 0 rgb(243, 247, 60);
-    backdrop-filter: blur(8.0px);
-    border-radius: 5%;
+    height: 553px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px #fff;
+    overflow: hidden;
 }
 
 .img-card{
-    height: 200px;
-    width: 200px;
-    border-radius: 4%;
+    height: 553px;
+    width: 350px;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.intro {
+    height: 120px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 240px;
+    background-color: rgb(27, 27, 27, .5);
+    color: white;
+    transition: .5s;
 }
 
 .intro-h{
@@ -40,39 +41,29 @@
     margin-right: 5%;
 }
 
-.heart{
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 5%;
-}
-.heart:hover{
-    font-size: 19px;
-}
-
 .name{
+    margin: 10px;
+    font-size: 30px;
+    color: rgb(249, 245, 250);
     cursor: pointer;
-    font-size: 25px;
-    margin-bottom: 5%;
 }
 
 .name:hover{
+    color: rgb(80, 154, 238);
+}
+
+h4{
+    color: rgb(120, 147, 236);
+}
+
+p{
     font-size: 23px;
-    color: rgb(243, 247, 60);
+    margin: 25px;
+    visibility: hidden;
+    opacity: 0;
 }
 
-.link {
-    text-decoration: none;
-    color: #fff;
-}
-
-.info-p {
-    color: #fff;
-    margin-bottom: 5%;
-}
-
-.x {
+.x{
     background-color: rgb(204, 67, 67);
     border-radius: 10px;
     width: 20px;
@@ -89,3 +80,25 @@
     transform: scale(0.8);
 }
 
+.link {
+    text-decoration: none;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card:hover .intro{
+    height: 220px;
+    bottom: 240px;
+    background-color: rgb(112, 96, 96);
+}
+
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+
+.card:hover .img-card{
+    transform: scale(1.1) rotate(-3deg);
+}

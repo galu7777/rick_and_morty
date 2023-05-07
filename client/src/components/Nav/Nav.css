@@ -13,8 +13,7 @@ body {
 
 
 nav{
-    /* background-image: linear-gradient(150deg,#82cc3a, #7f11ce48, #227eaf); */
-    background-color: #27282c;
+    background-image: linear-gradient(150deg,#27afeefd, #7f11ce48, #27afeefd);
     min-height: 8vh; /* Ayuda a darle altura minima a la clase*/
     display: flex;
     justify-content: space-between;
@@ -31,83 +30,37 @@ nav{
   align-items: center;
 }
 
-.btn-nav{
-  position: relative;
-  background: #fff;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  font-weight: 400;
-  padding: 10px 30px;
-  transition: 0.5s;
-}
-
-.btn-nav:hover{
-  background: #6eff3e;
-  color: #6eff3e;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  box-shadow: 0 0 35px #6eff3e;
-}
-
-.btn-nav:before{
-  content: '';
-  position: absolute;
-  inset: 2px;
-  background: #27282c;
-}
-
-button span {
-  position: relative;
-  z-index: 1;
-}
-
-button i{
-  position: absolute;
-  inset: 0;
-  display: block;
-}
-
-button i::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 80%;
-  width: 10px;
-  height: 4px;
-  background-color: #27282c;
-  transform: translateX(-50%) skewX(325deg);
-  transition: 0.5s;
-}
-
-button:hover i::before{
-  width: 20%;
-  left: 20%;
-}
-
-button i::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 20%;
-  width: 10px;
-  height: 4px;
-  background-color: #27282c;
-  transform: translateX(-50%) skewX(325deg);
-  transition: 0.5s;
-}
-
-button:hover i::after{
-  width: 20%;
-  left: 80%;
-}
-
 .link-button{
   text-decoration: none;
   color: #fff;
   border-color: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
   transition: 0.3s;
+}
+
+.btn-nav {
+  border-color: #fff;
+  border-width: 1px;
+  background-image: linear-gradient(
+    150deg,
+    #9500ff,
+    #09f,
+    #00DDFF
+  );
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-nav:hover {
+  border: 0;
+}
+
+.btn-nav:active{
+  transform: scale(0.8);
 }
 
 .link-button:active{

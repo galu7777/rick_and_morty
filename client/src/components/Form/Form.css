@@ -1,8 +1,5 @@
-.container-form{
+.container{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .form{
@@ -10,17 +7,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    height: 800px;
+    height: 600px;
     width: 450px;
-    background-color: rgba(82, 78, 78, 0.4);
-    box-shadow: 0 8px 32px 0 #82cc3a;
-    backdrop-filter: blur(4.0px);
+    background-color: rgb(126, 118, 118);
+    box-shadow: 8px 8px 30px #fff;
     border-radius: 38px;
     cursor: pointer;
 }
 
 .div-form {
-    width: 75%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -33,10 +28,7 @@
 }
 
 .label {    
-    color: #fff;
-    font-size: 18px;
-    margin-bottom: 4%;
-    text-transform: uppercase;
+    color: #00DDFF;
 }
 
 .info{
@@ -55,7 +47,7 @@
     justify-content: center;
     align-items: center;
 }
-/* .btn {
+.btn {
     border-color: #fff;
     border-width: 1px;
     background-image: linear-gradient(
@@ -67,12 +59,12 @@
     border-radius: 5px;
     font-size: 14px;
     /* padding: 10px 14px; */
-    /* height: 30px;
+    height: 30px;
     cursor: pointer;
     transition: 0.3s;
     color: #fff;
-    margin-top: 30px; */
-  /* }
+    margin-top: 30px;
+  }
   
   .btn:hover {
     border: 0;
@@ -80,88 +72,13 @@
   
   .btn:active{
     transform: scale(0.8);
-  } */
-
-  .btn{
-    margin-top: 10%;
-    position: relative;
-    background: #fff;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    padding: 10px 30px;
-    transition: 0.5s;
   }
-
-  .btn:hover{
-    background: #6eff3e;
-    color: #6eff3e;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    box-shadow: 0 0 35px #6eff3e;
-  }
-
-  .btn:before{
-    content: '';
-    position: absolute;
-    inset: 2px;
-    background: #27282c;
-  }
-
-  button span {
-    position: relative;
-    z-index: 1;
-  }
-
-  button i{
-    position: absolute;
-    inset: 0;
-    display: block;
-  }
-
-  button i::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 80%;
-    width: 10px;
-    height: 4px;
-    background-color: #27282c;
-    transform: translateX(-50%) skewX(325deg);
-    transition: 0.5s;
-  }
-
-  button:hover i::before{
-    width: 20%;
-    left: 20%;
-  }
-  
-  button i::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    width: 10px;
-    height: 4px;
-    background-color: #27282c;
-    transform: translateX(-50%) skewX(325deg);
-    transition: 0.5s;
-  }
-
-  button:hover i::after{
-    width: 20%;
-    left: 80%;
-  } 
 
   .img-login {
     border-radius: 35px;
-    box-shadow: 8px 8px 30px rgb(243, 247, 60);
+    box-shadow: 8px 8px 30px #f464b6;
     transition: 0.5s;
     border-radius: 38px;
-    width: 350px;
-    height: 350px;
   }
 
   .img-login:hover {
