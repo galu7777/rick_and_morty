@@ -7,6 +7,7 @@ import './Card.css';
 
 
 const Card = ({
+  userId,
   id,
   name,
   status,
@@ -19,7 +20,7 @@ const Card = ({
   removeFav,
   myFavorites
 }) => {
-
+  
   const [isFav, setIsFav] = useState(false);
 
   const handleFavorite = () => {
@@ -29,7 +30,7 @@ const Card = ({
     }
     else {
       setIsFav(true)
-      addFav({id, name, status, species, gender, origin, image })
+      addFav({userId, id, name, status, species, gender, origin, image})
     }
   }
 

@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import axios from 'axios';
 import validation from '../Validation/Validation';
-import RM from './assets/RM.gif'
-import './Form.css'
+import RM from './assets/RM.gif';
+import './Form.css';
 
 export default function Form({login}) {
   const [errors, setErrors] = useState({})
@@ -9,6 +10,7 @@ export default function Form({login}) {
     email: '',
     password: ''
   });
+
 
   const handleChange = (event) => {
     setUserData({
@@ -22,7 +24,14 @@ export default function Form({login}) {
     }))
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event) => {    
+    axios.post("http://localhost:3001/rickandmorty/register", {
+      email: userData.email,
+      password: userData.password,
+      id: 1
+    }).then(({data}) => {
+      console.log(data)
+    })
     event.preventDefault();
     login(userData);
     console.log(userData)

@@ -9,6 +9,7 @@ export default function Cards({ characters, onClose }) {
           ({ id, name, status, species, gender, origin, image }) => {
             return (
               <Card
+                userId={1}
                 key={id}
                 id={id}
                 name={name}

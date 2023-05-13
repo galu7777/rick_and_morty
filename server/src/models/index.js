@@ -3,5 +3,5 @@ const favorites = require('./Favorite');
 
 module.exports = {
     users,
-    favorites
+    favorites,
 };

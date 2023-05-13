@@ -3,14 +3,44 @@ const {User, Favorite} = require('../DB_connection');
 
 
 const postFav = async(req, res) => {
-    const character = req.body
+    const {
+        userId,
+        id,
+        name,
+        status,
+        species,
+        gender,
+        origin,
+        image,
+    } = req.body;
+
+    const character = {
+        userId,
+        id,
+        name,
+        status,
+        species,
+        gender,
+        origin,
+        image,
+    };
+    
     try {
         //myFavorites.push(character)
         const char = await Favorite.create(character);
+        if(userId){
+
+            const user = await User.findByPk(userId)
+            if(user){
+                //************************/
+                //AQUI SE CREA LA RELACION
+                await user.addFavorite(char);
+            }
+        }
         const favorites = await Favorite.findAll();
         return res.status(200).json(favorites);
     } catch (error) {
-        return res.status(404).send({ message: error })
+        return res.status(404).send({ message: error.message })
     }
 }
 
@@ -23,7 +53,7 @@ const deleteFav = async (req, res) => {
         if(char){
             await Favorite.destroy({
                 where: {
-                    id: id
+                    id,
                  }
             })
         }
